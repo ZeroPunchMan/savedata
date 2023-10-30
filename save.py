@@ -34,4 +34,11 @@ for s in sourcePath:
         print("!!!not found: {0}!!!".format(s.description))
 
 # need commit?
-# c = input("")
+c = input("commit?(y/n)")
+info = input("commit info:")
+if c == "y" or c == "Y":
+    os.system("git add .")
+    cmd = "git commit -m \"{0}\"".format(info)
+else:
+    os.system("echo no commit")
+    
