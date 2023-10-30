@@ -5,18 +5,21 @@ class SavePath:
         self.description = desc
 
 
-# sourcePath = {
-#     SavePath("C:/Program Files (x86)/Steam/userdata/339055594/1446780/remote/win64_save",
-#             "./MHRS/win64_save"),
-#     SavePath("C:/Users/lyj/Documents/My Games/Borderlands 3/Saved/SaveGames",
-#             "./BL3/SaveGames"),
-# }
+sourcePath = {
+    SavePath("C:/Program Files (x86)/Steam/userdata/339055594/1446780/remote/win64_save",
+            "./MHRS/win64_save",
+            "MHRS"),
+    SavePath("C:/Users/lyj/Documents/My Games/Borderlands 3/Saved/SaveGames",
+            "./BL3/SaveGames",
+            "BORDERLANDS 3"),
+}
 
-sourcePath = [
-    SavePath("D:/test/abc", "./abc", "abc"),
-    SavePath("D:/test/def", "./def", "def"),
-    SavePath("D:/test/xyz", "./xyz", "xyz"),
-]
+# for test
+# sourcePath = [
+#     SavePath("D:/test/abc", "./abc", "abc"),
+#     SavePath("D:/test/def", "./def", "def"),
+#     SavePath("D:/test/xyz", "./xyz", "xyz"),
+# ]
 
 import os
 import shutil
@@ -35,10 +38,12 @@ for s in sourcePath:
 
 # need commit?
 c = input("commit?(y/n)")
-info = input("commit info:")
 if c == "y" or c == "Y":
+    info = input("commit info:")
     os.system("git add .")
     cmd = "git commit -m \"{0}\"".format(info)
+    os.system(cmd)
 else:
     os.system("echo no commit")
     
+os.system("pause")
