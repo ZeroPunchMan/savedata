@@ -38,7 +38,7 @@ for s in sourcePath:
                 shutil.rmtree(s.dst)
 
         shutil.copytree(s.src, s.dst)
-        print("\t***复制完成 {0}".ofrmat(s.desc))
+        print("\t***复制完成 {0}".format(s.desc))
     else:
         print("!!!未找到存档: {0}!!!".format(s.desc))
 
