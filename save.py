@@ -2,44 +2,50 @@ class SavePath:
     def __init__(self, src, dst, desc) -> None:
         self.source = src
         self.destination = dst
-        self.description = desc
+        self.desc = desc
 
 
-sourcePath = {
-    SavePath("C:/Program Files (x86)/Steam/userdata/339055594/1446780/remote/win64_save",
-            "./MHRS/win64_save",
-            "MHRS"),
-    SavePath("C:/Users/lyj/Documents/My Games/Borderlands 3/Saved/SaveGames",
-            "./BL3/SaveGames",
-            "BORDERLANDS 3"),
-}
+# sourcePath = {
+#     SavePath("C:/Program Files (x86)/Steam/userdata/339055594/1446780/remote/win64_save",
+#             "./MHRS/win64_save",
+#             "MHRS"),
+#     SavePath("C:/Users/lyj/Documents/My Games/Borderlands 3/Saved/SaveGames",
+#             "./BL3/SaveGames",
+#             "BORDERLANDS 3"),
+# }
 
 # for test
-# sourcePath = [
-#     SavePath("D:/test/abc", "./abc", "abc"),
-#     SavePath("D:/test/def", "./def", "def"),
-#     SavePath("D:/test/xyz", "./xyz", "xyz"),
-# ]
+sourcePath = [
+    SavePath("D:/test/abc", "./abc", "abc"),
+    SavePath("D:/test/def", "./def", "def"),
+    SavePath("D:/test/xyz", "./xyz", "xyz"),
+]
 
 import os
 import shutil
+import filecmp
 
 for s in sourcePath:
     if os.path.isdir(s.source) == True:
-        print("+++try copy {0}+++".format(s.description))
-        if os.path.isdir(s.description) == True:
-            print("\tdelete old files")
-            shutil.rmtree(s.destination)
+        print("+++找到存档 {0}+++".format(s.desc))
+        if os.path.isdir(s.desc) == True:
+            cmp = filecmp.dircmp(s.source, s.destination)
+            if len(cmp.diff_files) == 0 and len(cmp.left_only) == 0 and len(cmp.right_only) == 0:
+                print("\t***文件相同,跳过")
+                continue
+            else:
+                print("\t***删除旧文件")
+                shutil.rmtree(s.destination)
 
         shutil.copytree(s.source, s.destination)
-        print("\t***{0} copy done".format(s.description))
+        print("\t***复制完成 {0}".format(s.desc))
     else:
-        print("!!!not found: {0}!!!".format(s.description))
+        print("!!!未找到存档: {0}!!!".format(s.desc))
 
 # need commit?
-c = input("commit?(y/n)")
+c = input("提交?(y/n)")
 if c == "y" or c == "Y":
-    info = input("commit info:")
+    info = input("提交日志:")
     os.system("git add .")
     cmd = "git commit -m \"{0}\"".format(info)
     os.system(cmd)
