@@ -1,7 +1,7 @@
 class SavePath:
     def __init__(self, src, dst, desc) -> None:
-        self.source = src
-        self.destination = dst
+        self.src = src
+        self.dst = dst
         self.desc = desc
 
 
@@ -26,19 +26,19 @@ import shutil
 import filecmp
 
 for s in sourcePath:
-    if os.path.isdir(s.source) == True:
+    if os.path.isdir(s.src) == True:
         print("+++找到存档 {0}+++".format(s.desc))
-        if os.path.isdir(s.desc) == True:
-            cmp = filecmp.dircmp(s.source, s.destination)
+        if os.path.isdir(s.dst) == True:
+            cmp = filecmp.dircmp(s.src, s.dst)
             if len(cmp.diff_files) == 0 and len(cmp.left_only) == 0 and len(cmp.right_only) == 0:
                 print("\t***文件相同,跳过")
                 continue
             else:
                 print("\t***删除旧文件")
-                shutil.rmtree(s.destination)
+                shutil.rmtree(s.dst)
 
-        shutil.copytree(s.source, s.destination)
-        print("\t***复制完成 {0}".format(s.desc))
+        shutil.copytree(s.src, s.dst)
+        print("\t***复制完成 {0}".ofrmat(s.desc))
     else:
         print("!!!未找到存档: {0}!!!".format(s.desc))
 
