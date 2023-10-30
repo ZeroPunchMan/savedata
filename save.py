@@ -5,21 +5,21 @@ class SavePath:
         self.desc = desc
 
 
-# sourcePath = {
-#     SavePath("C:/Program Files (x86)/Steam/userdata/339055594/1446780/remote/win64_save",
-#             "./MHRS/win64_save",
-#             "MHRS"),
-#     SavePath("C:/Users/lyj/Documents/My Games/Borderlands 3/Saved/SaveGames",
-#             "./BL3/SaveGames",
-#             "BORDERLANDS 3"),
-# }
+sourcePath = {
+    SavePath("C:/Program Files (x86)/Steam/userdata/339055594/1446780/remote/win64_save",
+            "./MHRS/win64_save",
+            "MHRS"),
+    SavePath("C:/Users/lyj/Documents/My Games/Borderlands 3/Saved/SaveGames",
+            "./BL3/SaveGames",
+            "BORDERLANDS 3"),
+}
 
 # for test
-sourcePath = [
-    SavePath("D:/test/abc", "./abc", "abc"),
-    SavePath("D:/test/def", "./def", "def"),
-    SavePath("D:/test/xyz", "./xyz", "xyz"),
-]
+# sourcePath = [
+#     SavePath("D:/test/abc", "./abc", "abc"),
+#     SavePath("D:/test/def", "./def", "def"),
+#     SavePath("D:/test/xyz", "./xyz", "xyz"),
+# ]
 
 import os
 import shutil
