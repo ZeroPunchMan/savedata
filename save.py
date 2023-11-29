@@ -16,6 +16,11 @@ sourcePath = {
         "./BL3/SaveGames",
         "BORDERLANDS 3",
     ),
+    SavePath(
+        "C:/ProgramData/Steam/ZumasRevenge/users",
+        "./zumas_revenge/users",
+        "ZumasRevenge",
+    ),
 }
 
 # for test
