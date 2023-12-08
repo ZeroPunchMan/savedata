@@ -21,6 +21,11 @@ sourcePath = {
         "./zumas_revenge/users",
         "ZumasRevenge",
     ),
+    SavePath(
+        "C:/Users/lyj/Documents/My Games/Tiny Tina's Wonderlands/Saved/SaveGames",
+        "./TinyTina/SaveGames",
+        "Tiny Tina's Wonderlands",
+    ),
 }
 
 # for test
