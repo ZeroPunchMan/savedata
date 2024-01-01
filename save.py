@@ -26,9 +26,14 @@ sourcePath = {
         "./TinyTina/SaveGames",
         "Tiny Tina's Wonderlands",
     ),
+    SavePath(
+        "C:/Users/lyj/Documents/Salt and Sacrifice/savedata",
+        "./Salt2/savedata",
+        "Salt and Sacrifice",
+    ),
 }
 
-# for test
+# for test 
 # sourcePath = [
 #     SavePath("D:/test/abc", "./abc", "abc"),
 #     SavePath("D:/test/def", "./def", "def"),
