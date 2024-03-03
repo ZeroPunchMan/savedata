@@ -31,6 +31,11 @@ sourcePath = {
         "./Salt2/savedata",
         "Salt and Sacrifice",
     ),
+    SavePath(
+        "C:/Users/lyj/AppData/LocalLow/Eleventh Hour Games/Last Epoch/Saves",
+        "./LastEpoch/Saves",
+        "Last Epoch",
+    ),
 }
 
 # for test 
