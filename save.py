@@ -31,16 +31,6 @@ sourcePath = {
         "./Salt2/savedata",
         "Salt and Sacrifice",
     ),
-    SavePath(
-        "C:/Users/lyj/AppData/LocalLow/Eleventh Hour Games/Last Epoch/Saves",
-        "./LastEpoch/Saves",
-        "Last Epoch",
-    ),
-    SavePath(
-        "C:/Users/lyj/Saved Games/Remnant2/Steam",
-        "./Remnant2/Steam",
-        "Remnant2",
-    ),
     
 }
 
