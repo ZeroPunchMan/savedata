@@ -12,6 +12,11 @@ sourcePath = {
         "MHRS",
     ),
     SavePath(
+        "C:/Program Files (x86)/Steam/userdata/339055594/582010/remote",
+        "./MHWI/remote",
+        "MHWI",
+    ),
+    SavePath(
         "C:/Users/lyj/Documents/My Games/Borderlands 3/Saved/SaveGames",
         "./BL3/SaveGames",
         "BORDERLANDS 3",
