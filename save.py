@@ -36,7 +36,16 @@ sourcePath = {
         "./Salt2/savedata",
         "Salt and Sacrifice",
     ),
-    
+    SavePath(
+        "C:/Users/lyj/AppData/Local/Darksiders3/Saved/SaveGames",
+        "./Darksiders3/SaveGames",
+        "Darksiders3",
+    ),
+    SavePath(
+        "C:/Program Files (x86)/Steam/userdata/339055594/1104280/remote",
+        "./Slormancer/remote",
+        "Slormancer",
+    ),
 }
 
 # for test 
