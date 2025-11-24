@@ -7,49 +7,19 @@ class SavePath:
 
 sourcePath = {
     SavePath(
-        "C:/Program Files (x86)/Steam/userdata/339055594/1446780/remote/win64_save",
-        "./MHRS/win64_save",
-        "MHRS",
-    ),
-    SavePath(
-        "C:/Program Files (x86)/Steam/userdata/339055594/582010/remote",
-        "./MHWI/remote",
-        "MHWI",
-    ),
-    SavePath(
-        "C:/Users/lyj/Documents/My Games/Borderlands 3/Saved/SaveGames",
-        "./BL3/SaveGames",
-        "BORDERLANDS 3",
-    ),
-    SavePath(
         "C:/ProgramData/Steam/ZumasRevenge/users",
         "./zumas_revenge/users",
         "ZumasRevenge",
     ),
     SavePath(
-        "C:/Users/lyj/Documents/My Games/Tiny Tina's Wonderlands/Saved/SaveGames",
-        "./TinyTina/SaveGames",
-        "Tiny Tina's Wonderlands",
-    ),
-    SavePath(
-        "C:/Users/lyj/Documents/Salt and Sacrifice/savedata",
-        "./Salt2/savedata",
-        "Salt and Sacrifice",
-    ),
-    SavePath(
-        "C:/Users/lyj/AppData/Local/Darksiders3/Saved/SaveGames",
-        "./Darksiders3/SaveGames",
-        "Darksiders3",
-    ),
-    SavePath(
-        "C:/Program Files (x86)/Steam/userdata/339055594/1104280/remote",
-        "./Slormancer/remote",
-        "Slormancer",
+        "C:/Program Files (x86)/Steam/userdata/339055594/219990/remote",
+        "./GD/remote",
+        "GrimDawn",
     ),
 }
 
 # for test 
-# sourcePath = [
+# sourcePath = [ 
 #     SavePath("D:/test/abc", "./abc", "abc"),
 #     SavePath("D:/test/def", "./def", "def"),
 #     SavePath("D:/test/xyz", "./xyz", "xyz"),
@@ -84,7 +54,7 @@ for s in sourcePath:
                 shutil.rmtree(s.dst)
 
         shutil.copytree(s.src, s.dst)
-        print("\t***复制完成 {0}".format(s.desc))
+        print("\t~~~~复制完成 {0}~~~~".format(s.desc))
     else:
         print("!!!未找到存档: {0}!!!".format(s.desc))
 
